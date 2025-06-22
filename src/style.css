@@ -1,0 +1,249 @@
+/* ===== Base Layout ===== */
+body {
+  background: #d2701a;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #20f134;
+}
+
+/* ===== Search & Filter ===== */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  ;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  background-color: rgb(222, 206, 206);
+  color: #000;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.4);
+}
+
+.search-button {
+  background-color:#4feb5e;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #12b533;
+}
+
+.filters {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  }
+
+.select-box {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  border: #000;
+  background-color: rgb(175, 170, 170);
+}
+
+/* ===== Repository Cards ===== */
+.repo-grid {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.repo-card {
+  background: rgb(101, 227, 43);
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.repo-details {
+  background: rgb(19, 191, 0);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;  
+}
+
+.repo-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+  color: #013536;
+}
+
+.bookmark-btn {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bookmarked {
+  background-color: #facc15;
+  color: #000;
+}
+
+.unbookmarked {
+  background-color: #f3f4f6;
+}
+
+.unbookmarked:hover {
+  background-color: #e5e7eb;
+}
+
+/* ===== Bookmark Panel ===== */
+.bookmark-panel {
+  margin-top: 3rem;
+  background-color: #86ee7e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookmark-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.bookmark-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bookmark-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  font-size: 2rem;
+  color: #6b7280;
+  background-color: #000000;
+  margin-top: 10rem;
+  border-radius: 15px;
+  border-color: #000;
+}
+
+/* ===== Dashboard Layout ===== */
+.dashboard-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+}
+
+/* Bookmark Sidebar */
+.bookmark-sidebar {
+  width: 200px;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  height: fit-content;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 2rem;
+}
+
+.note-box {
+  position: fixed ;
+  bottom: 1rem;
+  right: 1rem;
+  width: 250px;
+  height: 200px;
+  background-color: #efd252;
+  border: 1px solid #fcd34d;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding:1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.note-box textarea {
+  width: 100%;
+  height: 60%;
+  border: none;
+  resize: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  text-align: center;
+  text-decoration: underline;
+}
